@@ -17,8 +17,8 @@ async def evalrun(client, message):
     if not code:
         await message.edit("<b><emoji id=5210952531676504517>❌</emoji> No code provided.")
         return
-   out = await aexec(code, client, message)
-   await message.edit(out)
+    out = await aexec(code, client, message)
+    await message.edit(out)
    
       
 	
