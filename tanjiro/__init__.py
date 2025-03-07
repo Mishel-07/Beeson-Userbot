@@ -7,10 +7,11 @@ SESSION = os.environ.get('SESSION', '')
 
 
 app = Client(
-        "userbot",
+        "tanjiro-userbot",
         session_string=SESSION,
         api_id=API_ID,
         api_hash=API_HASH,
-        plugins=dict(root="plugins") )
+        plugins=dict(root="plugins") 
+)
 
     
