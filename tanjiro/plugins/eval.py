@@ -24,11 +24,12 @@ async def evalrun(client, message):
     if len(message.text.split()) <= 1:
         await message.edit("<b><emoji id=5210952531676504517>❌</emoji> No code provided.</b>")
         return
-    code = message.text.split(" ", 1)[1]   
-    output = await aexec(code, client, message)
-    if not output:
-        output = "Success"   
-    mes = f""":<b><emoji id=5260480440971570446>💻</emoji> Language:
+    code = message.text.split(" ", 1)[1] 
+    try:
+        output = await aexec(code, client, message)
+        if not output:
+            output = "Success"   
+        mes = f""":<b><emoji id=5260480440971570446>💻</emoji> Language:
 `python`
 
 <emoji id=5253742260054409879>✉️</emoji> Code:
@@ -36,5 +37,7 @@ async def evalrun(client, message):
 
 <emoji id=525374226005>🗓</emoji> Result:
 <pre>{output}</pre>
-    """
-    await message.edit(mes)
+        """
+        await message.edit(mes)
+    except Exception as e:
+        await message.edit(e)
