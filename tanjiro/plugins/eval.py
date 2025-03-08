@@ -30,10 +30,9 @@ async def evalrun(client, message):
 `python`
 
 <emoji id=5253742260054409879>✉️</emoji> Code:
-<pre>
-{code}
+<pre>{code}</pre>
 
-<emoji id=525374226005>✉️</emoji> Code:
-<pre> Result:
+<emoji id=525374226005>🗓</emoji> Result:
+<pre>{output}</pre>
     """
-    await message.edit(output)
+    await message.edit(mes)
