@@ -25,6 +25,7 @@ async def evalrun(client, message):
         await message.edit("<b><emoji id=5210952531676504517>❌</emoji> No code provided.</b>")
         return
     code = message.text.split(" ", 1)[1] 
+    await message.edit("<b><emoji id=5229064374403998351>🛍</emoji> Processing...</b>")
     try:
         output = await aexec(code, client, message)
         if not output:
