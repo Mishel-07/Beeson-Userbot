@@ -19,13 +19,15 @@ async def aexec(code, client, message):
     output = buffer.getvalue()
     return output
     
-@app.on_message(filters.command(["eval", "e"]) & filters.me)
+@app.on_message(filters.command(["eval", "e", "py", "python"]) & filters.me)
 async def evalrun(client, message):
     if len(message.text.split()) <= 1:
         await message.edit("<b><emoji id=5210952531676504517>❌</emoji> No code provided.</b>")
         return
-    code = message.text.split(" ", 1)[1]
+    code = message.text.split(" ", 1)[1]   
     output = await aexec(code, client, message)
+    if not output:
+        output = "Success"   
     mes = f""":<b><emoji id=5260480440971570446>💻</emoji> Language:
 `python`
 
