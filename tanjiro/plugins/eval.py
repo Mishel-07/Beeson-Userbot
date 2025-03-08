@@ -29,14 +29,14 @@ async def evalrun(client, message):
         output = await aexec(code, client, message)
         if not output:
             output = "Success"   
-        mes = f""":<b><emoji id=5260480440971570446>💻</emoji> Language:
+        mes = f"""<b><emoji id=5260480440971570446>💻</emoji> Language:
 `python`
 
 <emoji id=5253742260054409879>✉️</emoji> Code:
 <pre>{code}</pre>
 
-<emoji id=525374226005>🗓</emoji> Result:
-<pre>{output}</pre>
+<emoji id=5413879192267805083>🗓</emoji> Result:
+<pre>{output}</pre></b>
         """
         await message.edit(mes)
     except Exception as e:
