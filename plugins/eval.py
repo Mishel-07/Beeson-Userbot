@@ -1,4 +1,4 @@
-from tanjiro import app
+from plugins import app
 from pyrogram import filters
 import traceback
 import io
