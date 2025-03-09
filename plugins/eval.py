@@ -1,4 +1,4 @@
-from plugins import app
+from bot import app
 from pyrogram import filters
 import traceback
 import io
