@@ -1,4 +1,4 @@
-from bot import app
+from tanjiro import app
 from pyrogram import filters
 import traceback
 import io
