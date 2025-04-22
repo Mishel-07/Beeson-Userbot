@@ -11,7 +11,7 @@ app = Client(
         session_string=SESSION,
         api_id=API_ID,
         api_hash=API_HASH,
-        plugins=dict(root="tanjiro") 
+        plugins=dict(root="beeson") 
 )
 
 async def start_bot():
